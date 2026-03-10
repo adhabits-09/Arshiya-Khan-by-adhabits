@@ -27,7 +27,7 @@
         (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init','1173855581456092'); fbq('track','PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2355785068274195&ev=PageView&noscript=1"/></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1173855581456092&ev=PageView&noscript=1"/></noscript>
 
     <style>
         /* ===== NEW COLOR THEME ===== */
@@ -123,6 +123,24 @@
         .stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);}
         .counter{font-size:2rem;font-weight:800;color:var(--primary);}
 
+        /* Video Container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            background: #000;
+        }
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 9/16;
+            border: none;
+            display: block;
+        }
+
         /* Feedback carousel */
         .feedback-viewport{overflow:hidden;margin:1.5rem 0;}
         .feedback-track{display:flex;gap:15px;width:max-content;animation:scrollLeft 30s linear infinite;}
@@ -194,6 +212,7 @@
             .wa-btn{width:100%;justify-content:center;}
             h1.display-3{font-size:2rem;}
             h2.display-5{font-size:1.5rem;}
+            .video-container {max-width: 100%;}
         }
         @media(prefers-reduced-motion:reduce){
             *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
@@ -235,6 +254,17 @@
 <section class="hero-section text-center">
     <div class="container">
         <div class="badge-custom glow-pulse">🚀 Skill Seekers Community</div>
+        
+        <!-- YouTube Shorts Video -->
+        <div class="video-container glow-pulse">
+            <iframe 
+                src="https://www.youtube.com/embed/VpprX8hjJWw?autoplay=1&mute=1&loop=1&playlist=VpprX8hjJWw&controls=0&rel=0" 
+                title="YouTube Shorts Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
         <h1 class="display-3 fw-bold gradient-text mb-2 animate-fade-in">
             Join <span class="counter" data-target="10000" data-suffix="+">0</span> People
         </h1>
@@ -437,7 +467,7 @@
                 <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>🎂 Age:</strong> Your Age</div></div>
                 <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>💼 Profession:</strong> Current Status</div></div>
             </div>
-            <p class="fs-6 fw-semibold mb-3" style="color:var(--primary);">📌 Save My Number: 919325873356</p>
+            <p class="fs-6 fw-semibold mb-3" style="color:var(--primary);">📌 Save My Number: 919765836331</p>
             <button class="wa-btn open-any glow-pulse" style="background:var(--white);color:var(--primary);border:1px solid var(--primary);">📲 Message on WhatsApp Now</button>
             <div class="text-center mt-4">
                 <a href="https://www.instagram.com/syedamentor1?igsh=dm5qNzAxamowbTA1" target="_blank" class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2"><i data-lucide="instagram" width="24"></i>Follow on Instagram</a>
@@ -563,7 +593,7 @@
     const ppCloseNew=document.getElementById('ppCloseNew');
     const privacyBtn=document.getElementById('privacyBtn');
     const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzxIcyrQ8QX-8qs8wgOelrnwigqWZRJpNrFEbLE4PXiCJ-6Zanl5A0NMaGZeik2zxi6/exec";
-    const WA_NUMBER_INT="919325873356";
+    const WA_NUMBER_INT="919765836331";
 
     function openForm(source='site'){
         sourceInfo.value=source;
