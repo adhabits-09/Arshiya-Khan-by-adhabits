@@ -25,9 +25,9 @@
         n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
         t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
         (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init','1173855581456092'); fbq('track','PageView');
+        fbq('init','32957738250539535'); fbq('track','PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1173855581456092&ev=PageView&noscript=1"/></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=32957738250539535&ev=PageView&noscript=1"/></noscript>
 
     <style>
         /* ===== NEW COLOR THEME ===== */
@@ -123,7 +123,7 @@
         .stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);}
         .counter{font-size:2rem;font-weight:800;color:var(--primary);}
 
-        /* Video Container with Unmute Button */
+        /* Video Container - Now without unmute overlay */
         .video-wrapper {
             position: relative;
             width: 100%;
@@ -144,47 +144,6 @@
             height: 100%;
             border: none;
             display: block;
-        }
-        .unmute-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-            transition: opacity 0.3s;
-        }
-        .unmute-overlay.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .unmute-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        .unmute-text {
-            color: white;
-            margin-top: 10px;
-            font-size: 14px;
-            opacity: 0.9;
         }
 
         /* Feedback carousel */
@@ -233,12 +192,14 @@
             .pp-body-new{padding:1rem}
         }
 
-        /* Mentor Image Styling */
+        /* Mentor Image Styling - Now in feedback section */
         .mentor-image-container {
             position: relative;
             overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(46,94,153,.3);
+            max-width: 500px;
+            margin: 0 auto;
         }
         .mentor-image-container img {
             width: 100%;
@@ -301,23 +262,16 @@
     <div class="container">
         <div class="badge-custom glow-pulse">🚀 Skill Seekers Community</div>
         
-        <!-- YouTube Shorts Video with Unmute Option -->
+        <!-- YouTube Shorts Video - Auto plays with sound -->
         <div class="video-wrapper glow-pulse">
             <div class="video-container">
                 <iframe 
                     id="ytPlayer"
-                    src="https://www.youtube.com/embed/VpprX8hjJWw?autoplay=1&mute=0&loop=1&playlist=VpprX8hjJWw&controls=1&rel=0&playsinline=1" 
+                    src="https://www.youtube.com/embed/VpprX8hjJWw?autoplay=1&mute=0&loop=1&playlist=VpprX8hjJWw&controls=1&rel=0&playsinline=1&volume=100" 
                     title="YouTube Shorts Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
                 </iframe>
-            </div>
-            <div class="unmute-overlay" id="unmuteOverlay" onclick="unmuteVideo()">
-                <button class="unmute-btn">
-                    <span>🔊</span>
-                    <span>Click for Sound</span>
-                </button>
-                <div class="unmute-text">Tap to enable audio</div>
             </div>
         </div>
         
@@ -328,30 +282,26 @@
     </div>
 </section>
 
-<!-- ===== ABOUT / MENTOR PIC ===== -->
+<!-- ===== ABOUT / MENTOR INFO (Photo removed - now in feedback section) ===== -->
 <section class="py-5" style="background: var(--lightest);">
     <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
+        <div class="row g-4 align-items-center justify-content-center">
+            <div class="col-lg-8 text-center">
                 <div class="wa-btn glow-pulse mb-3 d-inline-block">💫 Meet Your Mentor</div>
-                <div class="mentor-image-container shine-effect">
-                    <img src="https://i.ibb.co/yBWDQLyM/arshiya.jpg" alt="Arshiya Khan - Your Mentor" loading="lazy">
-                </div>
-            </div>
-            <div class="col-lg-6">
                 <div class="badge-custom mb-2">💫 Your Coach</div>
                 <h2 class="display-5 fw-bold mb-3">Hi, I'm Arshiya Khan</h2>
-                <div class="mb-3">
+                <div class="mb-3 d-flex justify-content-center gap-4 flex-wrap">
                     <p class="fs-5 d-flex align-items-center gap-2 mb-2">✅ Entrepreneur</p>
                     <p class="fs-5 d-flex align-items-center gap-2 mb-2">💻 Freelancer</p>
                     <p class="fs-5 d-flex align-items-center gap-2">🎯 Online-Skills Coach</p>
                 </div>
-                <div class="p-3 rounded-2 mb-3 glow-border" style="background: var(--white);">
+                <div class="p-3 rounded-2 mb-3 glow-border d-inline-block" style="background: var(--white);">
                     <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">🎯 My Vision:</h3>
                     <p class="fs-5 fw-semibold mb-0">"Empower People to Empower Themselves"</p>
                 </div>
+                <br>
                 <button class="wa-btn mb-4 open-any shine-effect">📲 Connect on WhatsApp</button>
-                <div class="row g-3">
+                <div class="row g-3 justify-content-center">
                     <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="5" data-suffix="+">0</div><p>Years of Experience</p></div></div>
                     <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="2000" data-suffix="+">0</div><p>Students Helped</p></div></div>
                     <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="100000" data-prefix="₹">0</div><p>Monthly Earning</p></div></div>
@@ -390,6 +340,14 @@
                 <div class="feedback-item"><img src="https://i.ibb.co/jPGqnnjj/arshiya-9.jpg" alt="Student 8" loading="lazy"></div>
                 <div class="feedback-item"><img src="https://i.ibb.co/4wF988w6/arshiya-10.jpg" alt="Student 9" loading="lazy"></div>
                 <div class="feedback-item"><img src="https://i.ibb.co/ksYhbvLP/arshiya-11.jpg" alt="Student 10" loading="lazy"></div>
+            </div>
+        </div>
+        
+        <!-- MENTOR PHOTO MOVED HERE - Below feedback -->
+        <div class="mt-5 text-center">
+            <div class="wa-btn glow-pulse mb-3 d-inline-block">👩‍🏫 Your Mentor</div>
+            <div class="mentor-image-container shine-effect">
+                <img src="https://i.ibb.co/yBWDQLyM/arshiya.jpg" alt="Arshiya Khan - Your Mentor" loading="lazy">
             </div>
         </div>
     </div>
@@ -692,25 +650,13 @@
         formData.append('name',name);formData.append('phone',phone);formData.append('age',age);formData.append('gender',gender);formData.append('profession',profession);formData.append('source',sourceInfo.value);formData.append('timestamp',new Date().toISOString());
         fetch(SCRIPT_URL,{method:'POST',body:formData,mode:'no-cors'}).catch(()=>{});
         const msg=encodeURIComponent(`Hello Ma'am,\n\nI am interested in your program. Here are my details:\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
-        if(typeof fbq!=='undefined'){fbq('track','Contact');fbq('track','Lead',{content_name:'WhatsApp Form',content_source:sourceInfo.value});}
+        if(typeof fbq!=='undefined'){fbq('track','Contact');}
         window.open(`https://wa.me/${WA_NUMBER_INT}?text=${msg}`,'_blank');
         closeForm();
     });
     document.addEventListener('keydown',(e)=>{
         if(e.key==='Escape'){closeForm();closePPNew();}
     });
-
-    /* ===== Video Unmute Function ===== */
-    function unmuteVideo() {
-        const iframe = document.getElementById('ytPlayer');
-        const overlay = document.getElementById('unmuteOverlay');
-        
-        // Reload iframe with unmuted parameters
-        iframe.src = "https://www.youtube.com/embed/VpprX8hjJWw?autoplay=1&mute=0&loop=1&playlist=VpprX8hjJWw&controls=1&rel=0&playsinline=1&start=0";
-        
-        // Hide overlay
-        overlay.classList.add('hidden');
-    }
 </script>
 </body>
 </html>
